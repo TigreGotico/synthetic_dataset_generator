@@ -196,7 +196,7 @@ def cli(
         console.log(f"[blue]Using random seed:[/blue] {seed}")
 
     synthesize_and_convert(
-        wake_word=wakeword,
+        wake_word=wakeword.replace("_", " ").replace("-", " "),
         lang=lang,
         output_dir=output,
         reference_voices_dir=vc_refs,
