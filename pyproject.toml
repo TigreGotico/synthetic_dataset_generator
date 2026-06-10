@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "synthetic-dataset-generator"
-version = "0.1.0"
+dynamic = ["version"]
 description = "Wake word synthetic dataset generation and augmentation scripts"
 readme = "README.md"
 license = { text = "Apache-2.0" }
@@ -38,3 +38,6 @@ Repository = "https://github.com/TigreGotico/synthetic_dataset_generator"
 where = ["."]
 include = []
 
+
+[tool.setuptools.dynamic]
+version = {attr = "version.__version__"}
