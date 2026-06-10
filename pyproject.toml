@@ -34,10 +34,8 @@ test    = ["pytest>=7.0", "pytest-cov"]
 [project.urls]
 Repository = "https://github.com/TigreGotico/synthetic_dataset_generator"
 
-[tool.setuptools.packages.find]
-where = ["."]
-include = []
-
+[tool.setuptools]
+py-modules = ["version"]
 
 [tool.setuptools.dynamic]
 version = {attr = "version.__version__"}
